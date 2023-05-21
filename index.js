@@ -23,27 +23,16 @@ let y = 110;
 let a = 90;
 let b = 105;
 let c = 95;
+let sum = x + y + a + b + c;
 
 console.log(x + y + a + b + c + ' руб.');
 
 let totalPrice = document.getElementById('totalPrice');
 console.log(totalPrice.textContent);
-totalPrice.textContent = ' 500 руб.';
-
-const button = document.querySelector('.button');
-const total = document.querySelector('.total');
-let discount = 20;
-let price = 500;
-
-console.log(price-(price*discount)/100);
-
-function calculate () {
-    retern(500 - (price * discount / 100))
-};
+totalPrice.textContent = ' ' + sum + ' руб.';
 
 let buttonDiscount = document.querySelector('.button');
-button.addEventListener('click', function calculate () {
-    retern(500 - (price * discount / 100))
+buttonDiscount.addEventListener('click', function calculateDiscount () {
+    let discountPrice = sum * 0.8;
+    totalPrice.textContent = ' ' + discountPrice + ' руб.';
 });
-
-button.addEventListener('click', calculate);
